@@ -105,6 +105,19 @@ namespace lb10
             return arr;
         }
 
+        //public static double[] Cheack(double[] arr)
+        //{
+        //    double[] arr2 = new double[arr.Length];
+        //    for (int i = 0;i < arr.Length;i++) 
+        //    {
+        //        while (!double)
+        //        {
+        //            Console.Write("Введите верные данные\n");
+        //        }
+        //    }
+        //    return a;
+        //}
+
         /// <summary>
         /// Вывод кол-ва экземпляров
         /// </summary>
@@ -118,9 +131,9 @@ namespace lb10
         private static string EnterArr(double[] arr)
         {
             string str = " ";
-            for (int i = 0;i < arr.Length;i++)
+            for (int i = 0; i < arr.Length; i++)
             {
-                str = arr[i].ToString() + "   ";
+                str += arr[i].ToString() + "   ";
             }
             return str;
         }
