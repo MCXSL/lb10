@@ -140,10 +140,11 @@
             // listBoxAllAnimal
             // 
             this.listBoxAllAnimal.FormattingEnabled = true;
+            this.listBoxAllAnimal.HorizontalScrollbar = true;
             this.listBoxAllAnimal.ItemHeight = 16;
-            this.listBoxAllAnimal.Location = new System.Drawing.Point(795, 91);
+            this.listBoxAllAnimal.Location = new System.Drawing.Point(760, 91);
             this.listBoxAllAnimal.Name = "listBoxAllAnimal";
-            this.listBoxAllAnimal.Size = new System.Drawing.Size(237, 260);
+            this.listBoxAllAnimal.Size = new System.Drawing.Size(331, 340);
             this.listBoxAllAnimal.TabIndex = 10;
             // 
             // labelKolvoZapisei
@@ -217,7 +218,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1118, 477);
+            this.ClientSize = new System.Drawing.Size(1169, 485);
             this.Controls.Add(this.labelWeightLast3Mounth3);
             this.Controls.Add(this.labelWeightLast3Mounth2);
             this.Controls.Add(this.labelWeightLast3Mounth1);

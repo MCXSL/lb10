@@ -13,6 +13,7 @@ namespace lb10
         private double[] _WeightLast3Mounth = new double[3];
         private string _Type;
         private string _NumberPhone;
+        private static int _NumberOfAnimals = 0;
 
         /// <summary>
         /// Конструктор класса без параметров
@@ -24,6 +25,7 @@ namespace lb10
             _WeightLast3Mounth = Generation_weight(_WeightLast3Mounth);
             _Type = "Собака";
             _NumberPhone = "+79630991494";
+            _NumberOfAnimals++;
         }
 
         /// <summary>
@@ -37,6 +39,7 @@ namespace lb10
             _WeightLast3Mounth = Generation_weight(_WeightLast3Mounth);
             _Type = "Собака";
             _NumberPhone = "+79630991494";
+            _NumberOfAnimals++;
         }
 
         /// <summary>
@@ -51,6 +54,7 @@ namespace lb10
             _WeightLast3Mounth = Generation_weight(_WeightLast3Mounth);
             _Type = "Собака";
             _NumberPhone = "+79630991494";
+            _NumberOfAnimals++;
         }
 
         /// <summary>
@@ -68,6 +72,7 @@ namespace lb10
             _WeightLast3Mounth = weightLast3Mounth;
             _Type = type;
             _NumberPhone = numberPhone;
+            _NumberOfAnimals++;
         }
 
         /// <summary>
@@ -87,10 +92,43 @@ namespace lb10
             return arr;
         }
 
+        /// <summary>
+        /// Конвертатор в double массив
+        /// </summary>
+        /// <param name="a">первый элемент массива</param>
+        /// <param name="b">второй элемент массива</param>
+        /// <param name="c">третий элемент массива</param>
+        /// <returns>double массив</returns>
         public static double[] ConvToArr(string a, string b, string c)
         {
             double[] arr = { Convert.ToDouble(a), Convert.ToDouble(b), Convert.ToDouble(c)};
             return arr;
+        }
+
+        /// <summary>
+        /// Вывод кол-ва экземпляров
+        /// </summary>
+        /// <returns>кол-во экземпляров</returns>
+        public static string EnterNumberAnimals() 
+        {
+            string str = Animal._NumberOfAnimals.ToString();
+            return str;
+        }
+
+        private static string EnterArr(double[] arr)
+        {
+            string str = " ";
+            for (int i = 0;i < arr.Length;i++)
+            {
+                str = arr[i].ToString() + "   ";
+            }
+            return str;
+        }
+
+        public static string FormingString(Animal a)
+        {
+            string str = $"Имя : {a._Name}; Возраст : {a._Age}; Вес за 3 месяца : {EnterArr(a._WeightLast3Mounth)}; Вид : {a._Type}; Номер телефона хозяина : {a._NumberPhone}";
+            return str;
         }
     }
 }

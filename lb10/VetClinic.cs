@@ -21,6 +21,8 @@ namespace lb10
         private void buttonCreate_Click(object sender, EventArgs e)
         {
             Animal animal = new Animal(textBoxName.Text, Convert.ToInt32(textBoxAge.Text),Animal.ConvToArr(textBoxWeightLast3Mounth1.Text,textBoxWeightLast3Mounth2.Text, textBoxWeightLast3Mounth3.Text), comboBoxType.Text, textBoxNumberPhone.Text);
+            textBoxKolvoZapisei.Text = Animal.EnterNumberAnimals();
+            listBoxAllAnimal.Items.Add(Animal.FormingString(animal));
         }
     }
 }
