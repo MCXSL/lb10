@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace lb9
+namespace lb10
 {
     internal class Animal
     {
-        public string _Name;
-        public int _Age;
-        public double[] _WeightLast3Mounth = new double[3];
-        public string _Type;
-        public string _NumberPhone;
+        private string _Name;
+        private int _Age;
+        private double[] _WeightLast3Mounth = new double[3];
+        private string _Type;
+        private string _NumberPhone;
 
         /// <summary>
         /// Конструктор класса без параметров
@@ -75,7 +75,7 @@ namespace lb9
         /// </summary>
         /// <param name="arr">Вес животного за 3 месяца(пустой массив)</param>
         /// <returns>Вес животного за 3 месяца(заполненый массив)</returns>
-        public static double[] Generation_weight(double[] arr)
+        protected static double[] Generation_weight(double[] arr)
         {
             Random rnd = new Random(Guid.NewGuid().GetHashCode());
             for (int i = 0; i < arr.Length; i++)
@@ -84,6 +84,12 @@ namespace lb9
                 double b = rnd.Next(1, 99);
                 arr[i] = a + (b / 100);
             }
+            return arr;
+        }
+
+        public static double[] ConvToArr(string a, string b, string c)
+        {
+            double[] arr = { Convert.ToDouble(a), Convert.ToDouble(b), Convert.ToDouble(c)};
             return arr;
         }
     }

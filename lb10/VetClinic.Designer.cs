@@ -47,7 +47,6 @@
             this.labelWeightLast3Mounth1 = new System.Windows.Forms.Label();
             this.labelWeightLast3Mounth2 = new System.Windows.Forms.Label();
             this.labelWeightLast3Mounth3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelName
@@ -103,6 +102,7 @@
             this.buttonCreate.TabIndex = 5;
             this.buttonCreate.Text = "Создать";
             this.buttonCreate.UseVisualStyleBackColor = true;
+            this.buttonCreate.Click += new System.EventHandler(this.buttonCreate_Click);
             // 
             // textBoxName
             // 
@@ -124,6 +124,7 @@
             this.textBoxWeightLast3Mounth1.Name = "textBoxWeightLast3Mounth1";
             this.textBoxWeightLast3Mounth1.Size = new System.Drawing.Size(100, 22);
             this.textBoxWeightLast3Mounth1.TabIndex = 8;
+            this.textBoxWeightLast3Mounth1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // comboBoxType
             // 
@@ -175,13 +176,15 @@
             this.textBoxWeightLast3Mounth2.Name = "textBoxWeightLast3Mounth2";
             this.textBoxWeightLast3Mounth2.Size = new System.Drawing.Size(100, 22);
             this.textBoxWeightLast3Mounth2.TabIndex = 14;
+            this.textBoxWeightLast3Mounth2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // textBoxWeightLast3Mounth3
             // 
             this.textBoxWeightLast3Mounth3.Location = new System.Drawing.Point(611, 202);
             this.textBoxWeightLast3Mounth3.Name = "textBoxWeightLast3Mounth3";
-            this.textBoxWeightLast3Mounth3.Size = new System.Drawing.Size(73, 22);
+            this.textBoxWeightLast3Mounth3.Size = new System.Drawing.Size(96, 22);
             this.textBoxWeightLast3Mounth3.TabIndex = 15;
+            this.textBoxWeightLast3Mounth3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // labelWeightLast3Mounth1
             // 
@@ -210,21 +213,11 @@
             this.labelWeightLast3Mounth3.TabIndex = 18;
             this.labelWeightLast3Mounth3.Text = "Позапрошлый Месяц";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(524, 339);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 16);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "label1";
-            // 
             // VetClinic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1118, 477);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.labelWeightLast3Mounth3);
             this.Controls.Add(this.labelWeightLast3Mounth2);
             this.Controls.Add(this.labelWeightLast3Mounth1);
@@ -272,7 +265,6 @@
         private System.Windows.Forms.Label labelWeightLast3Mounth1;
         private System.Windows.Forms.Label labelWeightLast3Mounth2;
         private System.Windows.Forms.Label labelWeightLast3Mounth3;
-        private System.Windows.Forms.Label label1;
     }
 }
 
