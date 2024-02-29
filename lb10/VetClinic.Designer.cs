@@ -34,9 +34,20 @@
             this.labelType = new System.Windows.Forms.Label();
             this.labelNumberPhone = new System.Windows.Forms.Label();
             this.buttonCreate = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxName = new System.Windows.Forms.TextBox();
+            this.textBoxAge = new System.Windows.Forms.TextBox();
+            this.textBoxWeightLast3Mounth1 = new System.Windows.Forms.TextBox();
+            this.comboBoxType = new System.Windows.Forms.ComboBox();
+            this.listBoxAllAnimal = new System.Windows.Forms.ListBox();
+            this.labelKolvoZapisei = new System.Windows.Forms.Label();
+            this.textBoxKolvoZapisei = new System.Windows.Forms.TextBox();
+            this.textBoxNumberPhone = new System.Windows.Forms.TextBox();
+            this.textBoxWeightLast3Mounth2 = new System.Windows.Forms.TextBox();
+            this.textBoxWeightLast3Mounth3 = new System.Windows.Forms.TextBox();
+            this.labelWeightLast3Mounth1 = new System.Windows.Forms.Label();
+            this.labelWeightLast3Mounth2 = new System.Windows.Forms.Label();
+            this.labelWeightLast3Mounth3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelName
@@ -86,42 +97,147 @@
             // 
             // buttonCreate
             // 
-            this.buttonCreate.Location = new System.Drawing.Point(115, 364);
+            this.buttonCreate.Location = new System.Drawing.Point(310, 354);
             this.buttonCreate.Name = "buttonCreate";
-            this.buttonCreate.Size = new System.Drawing.Size(75, 23);
+            this.buttonCreate.Size = new System.Drawing.Size(99, 23);
             this.buttonCreate.TabIndex = 5;
             this.buttonCreate.Text = "Создать";
             this.buttonCreate.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // textBoxName
             // 
-            this.textBox1.Location = new System.Drawing.Point(310, 74);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 6;
+            this.textBoxName.Location = new System.Drawing.Point(310, 74);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(100, 22);
+            this.textBoxName.TabIndex = 6;
             // 
-            // textBox2
+            // textBoxAge
             // 
-            this.textBox2.Location = new System.Drawing.Point(324, 130);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 7;
+            this.textBoxAge.Location = new System.Drawing.Point(310, 136);
+            this.textBoxAge.Name = "textBoxAge";
+            this.textBoxAge.Size = new System.Drawing.Size(100, 22);
+            this.textBoxAge.TabIndex = 7;
             // 
-            // textBox3
+            // textBoxWeightLast3Mounth1
             // 
-            this.textBox3.Location = new System.Drawing.Point(339, 202);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 22);
-            this.textBox3.TabIndex = 8;
+            this.textBoxWeightLast3Mounth1.Location = new System.Drawing.Point(310, 202);
+            this.textBoxWeightLast3Mounth1.Name = "textBoxWeightLast3Mounth1";
+            this.textBoxWeightLast3Mounth1.Size = new System.Drawing.Size(100, 22);
+            this.textBoxWeightLast3Mounth1.TabIndex = 8;
+            // 
+            // comboBoxType
+            // 
+            this.comboBoxType.FormattingEnabled = true;
+            this.comboBoxType.Items.AddRange(new object[] {
+            "Кошка",
+            "Собака"});
+            this.comboBoxType.Location = new System.Drawing.Point(310, 256);
+            this.comboBoxType.Name = "comboBoxType";
+            this.comboBoxType.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxType.TabIndex = 9;
+            // 
+            // listBoxAllAnimal
+            // 
+            this.listBoxAllAnimal.FormattingEnabled = true;
+            this.listBoxAllAnimal.ItemHeight = 16;
+            this.listBoxAllAnimal.Location = new System.Drawing.Point(795, 91);
+            this.listBoxAllAnimal.Name = "listBoxAllAnimal";
+            this.listBoxAllAnimal.Size = new System.Drawing.Size(237, 260);
+            this.listBoxAllAnimal.TabIndex = 10;
+            // 
+            // labelKolvoZapisei
+            // 
+            this.labelKolvoZapisei.AutoSize = true;
+            this.labelKolvoZapisei.Location = new System.Drawing.Point(757, 38);
+            this.labelKolvoZapisei.Name = "labelKolvoZapisei";
+            this.labelKolvoZapisei.Size = new System.Drawing.Size(103, 16);
+            this.labelKolvoZapisei.TabIndex = 11;
+            this.labelKolvoZapisei.Text = "Всего записей";
+            // 
+            // textBoxKolvoZapisei
+            // 
+            this.textBoxKolvoZapisei.Location = new System.Drawing.Point(932, 35);
+            this.textBoxKolvoZapisei.Name = "textBoxKolvoZapisei";
+            this.textBoxKolvoZapisei.ReadOnly = true;
+            this.textBoxKolvoZapisei.Size = new System.Drawing.Size(100, 22);
+            this.textBoxKolvoZapisei.TabIndex = 12;
+            // 
+            // textBoxNumberPhone
+            // 
+            this.textBoxNumberPhone.Location = new System.Drawing.Point(310, 302);
+            this.textBoxNumberPhone.Name = "textBoxNumberPhone";
+            this.textBoxNumberPhone.Size = new System.Drawing.Size(100, 22);
+            this.textBoxNumberPhone.TabIndex = 13;
+            // 
+            // textBoxWeightLast3Mounth2
+            // 
+            this.textBoxWeightLast3Mounth2.Location = new System.Drawing.Point(456, 202);
+            this.textBoxWeightLast3Mounth2.Name = "textBoxWeightLast3Mounth2";
+            this.textBoxWeightLast3Mounth2.Size = new System.Drawing.Size(100, 22);
+            this.textBoxWeightLast3Mounth2.TabIndex = 14;
+            // 
+            // textBoxWeightLast3Mounth3
+            // 
+            this.textBoxWeightLast3Mounth3.Location = new System.Drawing.Point(611, 202);
+            this.textBoxWeightLast3Mounth3.Name = "textBoxWeightLast3Mounth3";
+            this.textBoxWeightLast3Mounth3.Size = new System.Drawing.Size(73, 22);
+            this.textBoxWeightLast3Mounth3.TabIndex = 15;
+            // 
+            // labelWeightLast3Mounth1
+            // 
+            this.labelWeightLast3Mounth1.AutoSize = true;
+            this.labelWeightLast3Mounth1.Location = new System.Drawing.Point(319, 183);
+            this.labelWeightLast3Mounth1.Name = "labelWeightLast3Mounth1";
+            this.labelWeightLast3Mounth1.Size = new System.Drawing.Size(81, 16);
+            this.labelWeightLast3Mounth1.TabIndex = 16;
+            this.labelWeightLast3Mounth1.Text = "Этот месяц";
+            // 
+            // labelWeightLast3Mounth2
+            // 
+            this.labelWeightLast3Mounth2.AutoSize = true;
+            this.labelWeightLast3Mounth2.Location = new System.Drawing.Point(453, 183);
+            this.labelWeightLast3Mounth2.Name = "labelWeightLast3Mounth2";
+            this.labelWeightLast3Mounth2.Size = new System.Drawing.Size(109, 16);
+            this.labelWeightLast3Mounth2.TabIndex = 17;
+            this.labelWeightLast3Mounth2.Text = "Прошлый месяц";
+            // 
+            // labelWeightLast3Mounth3
+            // 
+            this.labelWeightLast3Mounth3.AutoSize = true;
+            this.labelWeightLast3Mounth3.Location = new System.Drawing.Point(580, 183);
+            this.labelWeightLast3Mounth3.Name = "labelWeightLast3Mounth3";
+            this.labelWeightLast3Mounth3.Size = new System.Drawing.Size(143, 16);
+            this.labelWeightLast3Mounth3.TabIndex = 18;
+            this.labelWeightLast3Mounth3.Text = "Позапрошлый Месяц";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(524, 339);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 16);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "label1";
             // 
             // VetClinic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1118, 477);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelWeightLast3Mounth3);
+            this.Controls.Add(this.labelWeightLast3Mounth2);
+            this.Controls.Add(this.labelWeightLast3Mounth1);
+            this.Controls.Add(this.textBoxWeightLast3Mounth3);
+            this.Controls.Add(this.textBoxWeightLast3Mounth2);
+            this.Controls.Add(this.textBoxNumberPhone);
+            this.Controls.Add(this.textBoxKolvoZapisei);
+            this.Controls.Add(this.labelKolvoZapisei);
+            this.Controls.Add(this.listBoxAllAnimal);
+            this.Controls.Add(this.comboBoxType);
+            this.Controls.Add(this.textBoxWeightLast3Mounth1);
+            this.Controls.Add(this.textBoxAge);
+            this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.buttonCreate);
             this.Controls.Add(this.labelNumberPhone);
             this.Controls.Add(this.labelType);
@@ -143,9 +259,20 @@
         private System.Windows.Forms.Label labelType;
         private System.Windows.Forms.Label labelNumberPhone;
         private System.Windows.Forms.Button buttonCreate;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxName;
+        private System.Windows.Forms.TextBox textBoxAge;
+        private System.Windows.Forms.TextBox textBoxWeightLast3Mounth1;
+        private System.Windows.Forms.ComboBox comboBoxType;
+        private System.Windows.Forms.ListBox listBoxAllAnimal;
+        private System.Windows.Forms.Label labelKolvoZapisei;
+        private System.Windows.Forms.TextBox textBoxKolvoZapisei;
+        private System.Windows.Forms.TextBox textBoxNumberPhone;
+        private System.Windows.Forms.TextBox textBoxWeightLast3Mounth2;
+        private System.Windows.Forms.TextBox textBoxWeightLast3Mounth3;
+        private System.Windows.Forms.Label labelWeightLast3Mounth1;
+        private System.Windows.Forms.Label labelWeightLast3Mounth2;
+        private System.Windows.Forms.Label labelWeightLast3Mounth3;
+        private System.Windows.Forms.Label label1;
     }
 }
 
