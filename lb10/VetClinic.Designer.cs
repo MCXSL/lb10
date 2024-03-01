@@ -47,6 +47,7 @@
             this.labelWeightLast3Mounth1 = new System.Windows.Forms.Label();
             this.labelWeightLast3Mounth2 = new System.Windows.Forms.Label();
             this.labelWeightLast3Mounth3 = new System.Windows.Forms.Label();
+            this.labelAlarm = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelName
@@ -102,7 +103,7 @@
             // buttonCreate
             // 
             this.buttonCreate.Location = new System.Drawing.Point(232, 288);
-            this.buttonCreate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonCreate.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCreate.Name = "buttonCreate";
             this.buttonCreate.Size = new System.Drawing.Size(74, 19);
             this.buttonCreate.TabIndex = 5;
@@ -113,7 +114,7 @@
             // textBoxName
             // 
             this.textBoxName.Location = new System.Drawing.Point(232, 60);
-            this.textBoxName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxName.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(76, 20);
             this.textBoxName.TabIndex = 6;
@@ -121,7 +122,7 @@
             // textBoxAge
             // 
             this.textBoxAge.Location = new System.Drawing.Point(232, 110);
-            this.textBoxAge.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxAge.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxAge.Name = "textBoxAge";
             this.textBoxAge.Size = new System.Drawing.Size(76, 20);
             this.textBoxAge.TabIndex = 7;
@@ -129,7 +130,7 @@
             // textBoxWeightLast3Mounth1
             // 
             this.textBoxWeightLast3Mounth1.Location = new System.Drawing.Point(232, 164);
-            this.textBoxWeightLast3Mounth1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxWeightLast3Mounth1.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxWeightLast3Mounth1.Name = "textBoxWeightLast3Mounth1";
             this.textBoxWeightLast3Mounth1.Size = new System.Drawing.Size(76, 20);
             this.textBoxWeightLast3Mounth1.TabIndex = 8;
@@ -143,7 +144,7 @@
             "Кошка",
             "Собака"});
             this.comboBoxType.Location = new System.Drawing.Point(232, 208);
-            this.comboBoxType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxType.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxType.Name = "comboBoxType";
             this.comboBoxType.Size = new System.Drawing.Size(92, 21);
             this.comboBoxType.TabIndex = 9;
@@ -153,9 +154,9 @@
             this.listBoxAllAnimal.FormattingEnabled = true;
             this.listBoxAllAnimal.HorizontalScrollbar = true;
             this.listBoxAllAnimal.Location = new System.Drawing.Point(570, 74);
-            this.listBoxAllAnimal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listBoxAllAnimal.Margin = new System.Windows.Forms.Padding(2);
             this.listBoxAllAnimal.Name = "listBoxAllAnimal";
-            this.listBoxAllAnimal.Size = new System.Drawing.Size(521, 316);
+            this.listBoxAllAnimal.Size = new System.Drawing.Size(662, 316);
             this.listBoxAllAnimal.TabIndex = 10;
             // 
             // labelKolvoZapisei
@@ -171,7 +172,7 @@
             // textBoxKolvoZapisei
             // 
             this.textBoxKolvoZapisei.Location = new System.Drawing.Point(699, 28);
-            this.textBoxKolvoZapisei.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxKolvoZapisei.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxKolvoZapisei.Name = "textBoxKolvoZapisei";
             this.textBoxKolvoZapisei.ReadOnly = true;
             this.textBoxKolvoZapisei.Size = new System.Drawing.Size(76, 20);
@@ -180,7 +181,7 @@
             // textBoxNumberPhone
             // 
             this.textBoxNumberPhone.Location = new System.Drawing.Point(232, 245);
-            this.textBoxNumberPhone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxNumberPhone.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNumberPhone.Name = "textBoxNumberPhone";
             this.textBoxNumberPhone.Size = new System.Drawing.Size(76, 20);
             this.textBoxNumberPhone.TabIndex = 13;
@@ -188,7 +189,7 @@
             // textBoxWeightLast3Mounth2
             // 
             this.textBoxWeightLast3Mounth2.Location = new System.Drawing.Point(342, 164);
-            this.textBoxWeightLast3Mounth2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxWeightLast3Mounth2.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxWeightLast3Mounth2.Name = "textBoxWeightLast3Mounth2";
             this.textBoxWeightLast3Mounth2.Size = new System.Drawing.Size(76, 20);
             this.textBoxWeightLast3Mounth2.TabIndex = 14;
@@ -197,7 +198,7 @@
             // textBoxWeightLast3Mounth3
             // 
             this.textBoxWeightLast3Mounth3.Location = new System.Drawing.Point(458, 164);
-            this.textBoxWeightLast3Mounth3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxWeightLast3Mounth3.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxWeightLast3Mounth3.Name = "textBoxWeightLast3Mounth3";
             this.textBoxWeightLast3Mounth3.Size = new System.Drawing.Size(73, 20);
             this.textBoxWeightLast3Mounth3.TabIndex = 15;
@@ -226,18 +227,28 @@
             // labelWeightLast3Mounth3
             // 
             this.labelWeightLast3Mounth3.AutoSize = true;
-            this.labelWeightLast3Mounth3.Location = new System.Drawing.Point(435, 149);
+            this.labelWeightLast3Mounth3.Location = new System.Drawing.Point(451, 149);
             this.labelWeightLast3Mounth3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelWeightLast3Mounth3.Name = "labelWeightLast3Mounth3";
             this.labelWeightLast3Mounth3.Size = new System.Drawing.Size(115, 13);
             this.labelWeightLast3Mounth3.TabIndex = 18;
             this.labelWeightLast3Mounth3.Text = "Позапрошлый Месяц";
             // 
+            // labelAlarm
+            // 
+            this.labelAlarm.AutoSize = true;
+            this.labelAlarm.Location = new System.Drawing.Point(370, 63);
+            this.labelAlarm.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelAlarm.Name = "labelAlarm";
+            this.labelAlarm.Size = new System.Drawing.Size(0, 13);
+            this.labelAlarm.TabIndex = 19;
+            // 
             // VetClinic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1267, 540);
+            this.Controls.Add(this.labelAlarm);
             this.Controls.Add(this.labelWeightLast3Mounth3);
             this.Controls.Add(this.labelWeightLast3Mounth2);
             this.Controls.Add(this.labelWeightLast3Mounth1);
@@ -257,9 +268,9 @@
             this.Controls.Add(this.labelWeightLast3Mounth);
             this.Controls.Add(this.labelAge);
             this.Controls.Add(this.labelName);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "VetClinic";
-            this.Text = "Form1";
+            this.Text = "VetClinic";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -286,6 +297,7 @@
         private System.Windows.Forms.Label labelWeightLast3Mounth1;
         private System.Windows.Forms.Label labelWeightLast3Mounth2;
         private System.Windows.Forms.Label labelWeightLast3Mounth3;
+        private System.Windows.Forms.Label labelAlarm;
     }
 }
 

@@ -92,31 +92,49 @@ namespace lb10
             return arr;
         }
 
-        /// <summary>
-        /// Конвертатор в double массив
-        /// </summary>
-        /// <param name="a">первый элемент массива</param>
-        /// <param name="b">второй элемент массива</param>
-        /// <param name="c">третий элемент массива</param>
-        /// <returns>double массив</returns>
-        public static double[] ConvToArr(string a, string b, string c)
+        public static double[] ConvToArr(string [] strings)
         {
-            double[] arr = { Convert.ToDouble(a), Convert.ToDouble(b), Convert.ToDouble(c)};
+            double[] arr = new double[strings.Length];
+            for (int i = 0; i < strings.Length; i++)
+            {
+                arr[i] = Convert.ToDouble(strings[i]);
+            }
             return arr;
         }
 
-        //public static double[] Cheack(double[] arr)
-        //{
-        //    double[] arr2 = new double[arr.Length];
-        //    for (int i = 0;i < arr.Length;i++) 
-        //    {
-        //        while (!double)
-        //        {
-        //            Console.Write("Введите верные данные\n");
-        //        }
-        //    }
-        //    return a;
-        //}
+        public static bool CheackWeightLast3Mounth(string[] strings)
+        {
+            double[] arr = new double[strings.Length];
+            bool logic = false;
+            for (int i = 0;i < arr.Length;i++) 
+            {
+                if (double.TryParse(strings[i], out arr[i]))
+                {
+                    logic = true;
+                }
+                else
+                {
+                    logic = false;
+                    break;
+                }
+            }
+            return logic;
+        }
+
+        public static bool CheackAge(string str)
+        {
+            int a;
+            bool logic = false;
+            if (int.TryParse(str, out a))
+            {
+                logic = true;
+            }
+            else
+            {
+                logic = false;
+            }
+            return logic;
+        }
 
         /// <summary>
         /// Вывод кол-ва экземпляров
