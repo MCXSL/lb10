@@ -48,6 +48,7 @@
             this.labelWeightLast3Mounth2 = new System.Windows.Forms.Label();
             this.labelWeightLast3Mounth3 = new System.Windows.Forms.Label();
             this.labelAlarm = new System.Windows.Forms.Label();
+            this.buttonEdit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelName
@@ -153,11 +154,14 @@
             // 
             this.listBoxAllAnimal.FormattingEnabled = true;
             this.listBoxAllAnimal.HorizontalScrollbar = true;
+            this.listBoxAllAnimal.Items.AddRange(new object[] {
+            "Имя   Возраст    Вес          Вид         Номер телефона"});
             this.listBoxAllAnimal.Location = new System.Drawing.Point(570, 74);
             this.listBoxAllAnimal.Margin = new System.Windows.Forms.Padding(2);
             this.listBoxAllAnimal.Name = "listBoxAllAnimal";
             this.listBoxAllAnimal.Size = new System.Drawing.Size(662, 316);
             this.listBoxAllAnimal.TabIndex = 10;
+            this.listBoxAllAnimal.SelectedIndexChanged += new System.EventHandler(this.listBoxAllAnimal_SelectedIndexChanged);
             // 
             // labelKolvoZapisei
             // 
@@ -243,11 +247,23 @@
             this.labelAlarm.Size = new System.Drawing.Size(0, 13);
             this.labelAlarm.TabIndex = 19;
             // 
+            // buttonEdit
+            // 
+            this.buttonEdit.Location = new System.Drawing.Point(397, 288);
+            this.buttonEdit.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonEdit.Name = "buttonEdit";
+            this.buttonEdit.Size = new System.Drawing.Size(74, 19);
+            this.buttonEdit.TabIndex = 20;
+            this.buttonEdit.Text = "Изменить";
+            this.buttonEdit.UseVisualStyleBackColor = true;
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
+            // 
             // VetClinic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1267, 540);
+            this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.labelAlarm);
             this.Controls.Add(this.labelWeightLast3Mounth3);
             this.Controls.Add(this.labelWeightLast3Mounth2);
@@ -298,6 +314,7 @@
         private System.Windows.Forms.Label labelWeightLast3Mounth2;
         private System.Windows.Forms.Label labelWeightLast3Mounth3;
         private System.Windows.Forms.Label labelAlarm;
+        private System.Windows.Forms.Button buttonEdit;
     }
 }
 

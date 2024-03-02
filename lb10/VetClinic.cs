@@ -41,5 +41,18 @@ namespace lb10
                 labelAlarm.Text = "Введите корректные значения";
             }
         }
+
+        private void buttonEdit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBoxAllAnimal_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int temp = listBoxAllAnimal.SelectedIndex;
+            if (temp >= 0)
+                listBoxAllAnimal.Text = listBoxAllAnimal.Items[temp].ToString();
+        }
+
     }
 }
