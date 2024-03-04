@@ -155,7 +155,7 @@
             this.listBoxAllAnimal.FormattingEnabled = true;
             this.listBoxAllAnimal.HorizontalScrollbar = true;
             this.listBoxAllAnimal.Items.AddRange(new object[] {
-            "Имя   Возраст    Вес          Вид         Номер телефона"});
+            "Имя           Возраст          Вес             Вид         Номер телефона"});
             this.listBoxAllAnimal.Location = new System.Drawing.Point(570, 74);
             this.listBoxAllAnimal.Margin = new System.Windows.Forms.Padding(2);
             this.listBoxAllAnimal.Name = "listBoxAllAnimal";

@@ -44,14 +44,47 @@ namespace lb10
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
+            string[] weightLast3Mounth = { textBoxWeightLast3Mounth1.Text, textBoxWeightLast3Mounth2.Text, textBoxWeightLast3Mounth3.Text };
+            bool corectWeightLast3Mounth = Animal.CheackWeightLast3Mounth(weightLast3Mounth);
+            bool corectAge = Animal.CheackAge(textBoxAge.Text);
+            int temp = listBoxAllAnimal.SelectedIndex;
 
+            if (temp >= 1)
+            {
+                if (corectWeightLast3Mounth && corectAge)
+                {
+                    Animal animal = new Animal(textBoxName.Text, Convert.ToInt32(textBoxAge.Text), Animal.ConvToArr(weightLast3Mounth), comboBoxType.Text, textBoxNumberPhone.Text);
+                    textBoxKolvoZapisei.Text = Animal.EnterNumberAnimals();
+                    listBoxAllAnimal.Items[temp] = (Animal.FormingString(animal));
+                    labelAlarm.Text = null;
+                }
+                else
+                {
+                    textBoxAge.Text = null;
+                    textBoxWeightLast3Mounth1.Text = null;
+                    textBoxWeightLast3Mounth2.Text = null;
+                    textBoxWeightLast3Mounth3.Text = null;
+                    labelAlarm.Text = "Введите корректные значения";
+                }
+            }
         }
 
         private void listBoxAllAnimal_SelectedIndexChanged(object sender, EventArgs e)
         {
             int temp = listBoxAllAnimal.SelectedIndex;
-            if (temp >= 0)
-                listBoxAllAnimal.Text = listBoxAllAnimal.Items[temp].ToString();
+
+            if (temp >= 1)
+            {
+                string[] strings = Animal.UnformingString(listBoxAllAnimal.Items[temp].ToString());
+                textBoxName.Text = strings[0].Trim();
+                textBoxAge.Text = strings[1].Trim();
+                textBoxWeightLast3Mounth1.Text = strings[2].Trim();
+                textBoxWeightLast3Mounth2.Text = strings[3].Trim();    
+                textBoxWeightLast3Mounth3.Text = strings[4].Trim();
+                comboBoxType.Items[Animal.ComboBoxConv(strings[5].Trim())] = strings[5].Trim();
+                textBoxNumberPhone.Text = strings[6].Trim();
+            }
+                
         }
 
     }

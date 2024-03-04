@@ -75,6 +75,7 @@ namespace lb10
             _NumberOfAnimals++;
         }
 
+
         /// <summary>
         /// Генератор веса животного за 3 месяца
         /// </summary>
@@ -151,15 +152,57 @@ namespace lb10
             string str = " ";
             for (int i = 0; i < arr.Length; i++)
             {
-                str += arr[i].ToString() + "   ";
+                str += arr[i].ToString() + "  ";
             }
             return str;
         }
 
         public static string FormingString(Animal a)
         {
-            string str = $"Имя : {a._Name}; Возраст : {a._Age}; Вес за 3 месяца : {EnterArr(a._WeightLast3Mounth)}; Вид : {a._Type}; Номер телефона хозяина : {a._NumberPhone}";
+            string str = $"{a._Name}; {a._Age}; {EnterArr(a._WeightLast3Mounth)}; {a._Type}; {a._NumberPhone} ";
             return str;
         }
+
+        public static string[] UnformingString(string str)
+        {
+            char[] chars = str.ToCharArray();
+            string reservStr = "";
+            string[] arr = new string[7];
+            int j = 0;
+            for (int i = 0; i < chars.Length; i++)
+            {
+                if (chars[i] == ' ' && reservStr != "" && reservStr != " " && reservStr != "  ")
+                {
+                    arr[j] = reservStr;
+                    j++;
+                    reservStr = "";
+                }
+                else if (chars[i] == ';')
+                {
+
+                }
+                else
+                {
+                    reservStr += chars[i];
+                }
+            }
+            return arr;
+        }
+
+        public static int ComboBoxConv(string str)
+        {
+            int a = 0;
+            switch(str) 
+            {
+                case "Кошка":
+                    a = 0;
+                break;
+                case "Собака":
+                    a = 1;
+                break;
+            }
+            return a;
+        }
+
     }
 }
