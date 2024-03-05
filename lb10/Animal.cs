@@ -58,7 +58,7 @@ namespace lb10
         }
 
         /// <summary>
-        /// Конструктор класса со всеми параметрами
+        /// Конструктор класса со всеми параметрами кроме статического
         /// </summary>
         /// <param name="name">Кличка животного</param>
         /// <param name="age">Возраст</param>
@@ -73,6 +73,25 @@ namespace lb10
             _Type = type;
             _NumberPhone = numberPhone;
             _NumberOfAnimals++;
+        }
+
+        /// <summary>
+        /// Конструктор класса со всеми параметрами
+        /// </summary>
+        /// <param name="name">Кличка животного</param>
+        /// <param name="age">Возраст</param>
+        /// <param name="weightLast3Mounth">Вес за последние 3 месяца</param>
+        /// <param name="type">Вес животного</param>
+        /// <param name="numberPhone">Номер телефона владельца</param>
+        /// <param name="number">Кол-во созданных объектов</param>
+        public Animal(string name, int age, double[] weightLast3Mounth, string type, string numberPhone, int number)
+        {
+            _Name = name;
+            _Age = age;
+            _WeightLast3Mounth = weightLast3Mounth;
+            _Type = type;
+            _NumberPhone = numberPhone;
+            _NumberOfAnimals = number;
         }
 
 
@@ -93,6 +112,11 @@ namespace lb10
             return arr;
         }
 
+        /// <summary>
+        /// Конвертация в double массив
+        /// </summary>
+        /// <param name="strings">Массив строк</param>
+        /// <returns>double массив</returns>
         public static double[] ConvToArr(string [] strings)
         {
             double[] arr = new double[strings.Length];
@@ -103,6 +127,11 @@ namespace lb10
             return arr;
         }
 
+        /// <summary>
+        /// Проверка веса на корректтность
+        /// </summary>
+        /// <param name="strings">Вес</param>
+        /// <returns>Вердикт проверки</returns>
         public static bool CheackWeightLast3Mounth(string[] strings)
         {
             double[] arr = new double[strings.Length];
@@ -122,6 +151,11 @@ namespace lb10
             return logic;
         }
 
+        /// <summary>
+        /// Проверка возраста
+        /// </summary>
+        /// <param name="str"> возраст</param>
+        /// <returns>Вердикт проверки</returns>
         public static bool CheackAge(string str)
         {
             int a;
@@ -147,22 +181,40 @@ namespace lb10
             return str;
         }
 
+        /// <summary>
+        /// Запись массива в строку
+        /// </summary>
+        /// <param name="arr"> Массив </param>
+        /// <returns>Строка</returns>
         private static string EnterArr(double[] arr)
         {
             string str = " ";
+
             for (int i = 0; i < arr.Length; i++)
             {
-                str += arr[i].ToString() + "  ";
+                str += arr[i].ToString();
+                if (i < arr.Length - 1)
+                str += " | ";
             }
             return str;
         }
 
+        /// <summary>
+        /// Формировка строки для вывода
+        /// </summary>
+        /// <param name="a">Экземпляр классса</param>
+        /// <returns>Строка</returns>
         public static string FormingString(Animal a)
         {
-            string str = $"{a._Name}; {a._Age}; {EnterArr(a._WeightLast3Mounth)}; {a._Type}; {a._NumberPhone} ";
+            string str = $"{a._Name};             {a._Age};             {EnterArr(a._WeightLast3Mounth)};             {a._Type};             {a._NumberPhone};";
             return str;
         }
 
+        /// <summary>
+        /// Расформировка строки
+        /// </summary>
+        /// <param name="str">Строка</param>
+        /// <returns>Массив строк</returns>
         public static string[] UnformingString(string str)
         {
             char[] chars = str.ToCharArray();
@@ -171,13 +223,13 @@ namespace lb10
             int j = 0;
             for (int i = 0; i < chars.Length; i++)
             {
-                if (chars[i] == ' ' && reservStr != "" && reservStr != " " && reservStr != "  ")
+                if ((chars[i] == ';' || chars[i] == '|') && reservStr != "")
                 {
                     arr[j] = reservStr;
                     j++;
                     reservStr = "";
                 }
-                else if (chars[i] == ';')
+                else if (chars[i] == ' ')
                 {
 
                 }
@@ -188,21 +240,5 @@ namespace lb10
             }
             return arr;
         }
-
-        public static int ComboBoxConv(string str)
-        {
-            int a = 0;
-            switch(str) 
-            {
-                case "Кошка":
-                    a = 0;
-                break;
-                case "Собака":
-                    a = 1;
-                break;
-            }
-            return a;
-        }
-
     }
 }

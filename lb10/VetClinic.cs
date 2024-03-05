@@ -20,7 +20,6 @@ namespace lb10
 
         private void buttonCreate_Click(object sender, EventArgs e)
         {
-            //double vesZa3 = ;
             string[] weightLast3Mounth = { textBoxWeightLast3Mounth1.Text, textBoxWeightLast3Mounth2.Text, textBoxWeightLast3Mounth3.Text };
             bool corectWeightLast3Mounth = Animal.CheackWeightLast3Mounth(weightLast3Mounth);
             bool corectAge = Animal.CheackAge(textBoxAge.Text);
@@ -53,7 +52,7 @@ namespace lb10
             {
                 if (corectWeightLast3Mounth && corectAge)
                 {
-                    Animal animal = new Animal(textBoxName.Text, Convert.ToInt32(textBoxAge.Text), Animal.ConvToArr(weightLast3Mounth), comboBoxType.Text, textBoxNumberPhone.Text);
+                    Animal animal = new Animal(textBoxName.Text, Convert.ToInt32(textBoxAge.Text), Animal.ConvToArr(weightLast3Mounth), comboBoxType.Text, textBoxNumberPhone.Text, Convert.ToInt32(textBoxKolvoZapisei.Text));
                     textBoxKolvoZapisei.Text = Animal.EnterNumberAnimals();
                     listBoxAllAnimal.Items[temp] = (Animal.FormingString(animal));
                     labelAlarm.Text = null;
@@ -81,7 +80,6 @@ namespace lb10
                 textBoxWeightLast3Mounth1.Text = strings[2].Trim();
                 textBoxWeightLast3Mounth2.Text = strings[3].Trim();    
                 textBoxWeightLast3Mounth3.Text = strings[4].Trim();
-                comboBoxType.Items[Animal.ComboBoxConv(strings[5].Trim())] = strings[5].Trim();
                 textBoxNumberPhone.Text = strings[6].Trim();
             }
                 
