@@ -28,7 +28,8 @@ namespace lb10
             {
                 Animal animal = new Animal(textBoxName.Text, Convert.ToInt32(textBoxAge.Text), Animal.ConvToArr(weightLast3Mounth), comboBoxType.Text, textBoxNumberPhone.Text);
                 textBoxKolvoZapisei.Text = Animal.EnterNumberAnimals();
-                dataGridViewAllAnimal.Rows.Add(textBoxName.Text, Convert.ToInt32(textBoxAge.Text), Animal.ConvToArr(weightLast3Mounth), comboBoxType.Text, textBoxNumberPhone.Text);
+                // сделать метод для вывода строк  из класса в таблицу
+                dataGridViewAllAnimal.Rows.Add(textBoxName.Text, Convert.ToInt32(textBoxAge.Text), Animal.EnterArr(Animal.ConvToArr(weightLast3Mounth)), comboBoxType.Text, textBoxNumberPhone.Text);
                 labelAlarm.Text = null;
             }
             else 
@@ -41,7 +42,11 @@ namespace lb10
             }
         }
 
-        
+        private void buttonGenerationColection_Click(object sender, EventArgs e)
+        {
+            // генератор коллекциии сделать в классе Animal
+        }
+
 
         //private void listBoxAllAnimal_SelectedIndexChanged(object sender, EventArgs e)
         //{
@@ -57,7 +62,7 @@ namespace lb10
         //        textBoxWeightLast3Mounth3.Text = strings[4].Trim();
         //        textBoxNumberPhone.Text = strings[6].Trim();
         //    }
-                
+
         //}
 
     }

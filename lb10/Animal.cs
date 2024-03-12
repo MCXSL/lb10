@@ -20,11 +20,11 @@ namespace lb10
         /// </summary>
         public Animal()
         {
-            _Name = "Ник";
-            _Age = 4;
-            _WeightLast3Mounth = Generation_weight(_WeightLast3Mounth);
-            _Type = "Собака";
-            _NumberPhone = "+79630991494";
+            _Name = GenerationName();
+            _Age = GenerationAge();
+            _WeightLast3Mounth = Generationweight(_WeightLast3Mounth);
+            _Type = GenerationType();
+            _NumberPhone = GenerationNumberPhone();
             _NumberOfAnimals++;
         }
 
@@ -36,7 +36,7 @@ namespace lb10
         {
             _Name = name;
             _Age = 4;
-            _WeightLast3Mounth = Generation_weight(_WeightLast3Mounth);
+            _WeightLast3Mounth = Generationweight(_WeightLast3Mounth);
             _Type = "Собака";
             _NumberPhone = "+79630991494";
             _NumberOfAnimals++;
@@ -51,7 +51,7 @@ namespace lb10
         {
             _Name = name;
             _Age = age;
-            _WeightLast3Mounth = Generation_weight(_WeightLast3Mounth);
+            _WeightLast3Mounth = Generationweight(_WeightLast3Mounth);
             _Type = "Собака";
             _NumberPhone = "+79630991494";
             _NumberOfAnimals++;
@@ -94,13 +94,29 @@ namespace lb10
             _NumberOfAnimals = number;
         }
 
+        protected static string GenerationName()
+        {
+            string[] moreName= {"Бобик", "Вася", "Том", "Толя", "Мила", "Ника", "Пушинка"};
+            Random rnd = new Random(Guid.NewGuid().GetHashCode());
+            int a = rnd.Next(0, 6);
+            return moreName[a];
+        }
+
+        protected static int GenerationAge()
+        {
+            Random rnd = new Random(Guid.NewGuid().GetHashCode());
+            int a = rnd.Next(1, 18);
+            return a;
+        }
 
         /// <summary>
         /// Генератор веса животного за 3 месяца
         /// </summary>
         /// <param name="arr">Вес животного за 3 месяца(пустой массив)</param>
         /// <returns>Вес животного за 3 месяца(заполненый массив)</returns>
-        protected static double[] Generation_weight(double[] arr)
+        /// 
+
+        protected static double[] Generationweight(double[] arr)
         {
             Random rnd = new Random(Guid.NewGuid().GetHashCode());
             for (int i = 0; i < arr.Length; i++)
@@ -110,6 +126,25 @@ namespace lb10
                 arr[i] = a + (b / 100);
             }
             return arr;
+        }
+
+        protected static string GenerationType()
+        {
+            string[] moreType = { "кошка", "собака" };
+            Random rnd = new Random(Guid.NewGuid().GetHashCode());
+            int a = rnd.Next(0, 1);
+            return moreType[a];
+        }
+
+        protected static string GenerationNumberPhone()
+        {
+            string str = "";
+            Random rnd = new Random(Guid.NewGuid().GetHashCode());
+            for (int i = 0; i < 8; i++)
+            {
+                str += rnd.Next(0, 9);
+            }
+            return str;
         }
 
         /// <summary>
@@ -186,7 +221,7 @@ namespace lb10
         /// </summary>
         /// <param name="arr"> Массив </param>
         /// <returns>Строка</returns>
-        private static string EnterArr(double[] arr)
+        public static string EnterArr(double[] arr)
         {
             string str = " ";
 
@@ -240,5 +275,6 @@ namespace lb10
             }
             return arr;
         }
+
     }
 }

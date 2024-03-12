@@ -53,6 +53,9 @@
             this.WeightLast3Mounth = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NumberPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonGenerationColection = new System.Windows.Forms.Button();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAllAnimal)).BeginInit();
             this.SuspendLayout();
             // 
@@ -240,6 +243,7 @@
             this.NumberPhone});
             this.dataGridViewAllAnimal.Location = new System.Drawing.Point(760, 90);
             this.dataGridViewAllAnimal.Name = "dataGridViewAllAnimal";
+            this.dataGridViewAllAnimal.ReadOnly = true;
             this.dataGridViewAllAnimal.RowHeadersWidth = 51;
             this.dataGridViewAllAnimal.RowTemplate.Height = 24;
             this.dataGridViewAllAnimal.Size = new System.Drawing.Size(681, 150);
@@ -250,6 +254,7 @@
             this.Name.HeaderText = "Имя";
             this.Name.MinimumWidth = 6;
             this.Name.Name = "Name";
+            this.Name.ReadOnly = true;
             this.Name.Width = 125;
             // 
             // Age
@@ -257,6 +262,7 @@
             this.Age.HeaderText = "Возраст";
             this.Age.MinimumWidth = 6;
             this.Age.Name = "Age";
+            this.Age.ReadOnly = true;
             this.Age.Width = 125;
             // 
             // WeightLast3Mounth
@@ -264,6 +270,7 @@
             this.WeightLast3Mounth.HeaderText = "Вес за 3 месяца";
             this.WeightLast3Mounth.MinimumWidth = 6;
             this.WeightLast3Mounth.Name = "WeightLast3Mounth";
+            this.WeightLast3Mounth.ReadOnly = true;
             this.WeightLast3Mounth.Width = 125;
             // 
             // Type
@@ -271,6 +278,7 @@
             this.Type.HeaderText = "Вид";
             this.Type.MinimumWidth = 6;
             this.Type.Name = "Type";
+            this.Type.ReadOnly = true;
             this.Type.Width = 125;
             // 
             // NumberPhone
@@ -278,13 +286,45 @@
             this.NumberPhone.HeaderText = "Номер телефона";
             this.NumberPhone.MinimumWidth = 6;
             this.NumberPhone.Name = "NumberPhone";
+            this.NumberPhone.ReadOnly = true;
             this.NumberPhone.Width = 125;
+            // 
+            // buttonGenerationColection
+            // 
+            this.buttonGenerationColection.Location = new System.Drawing.Point(456, 354);
+            this.buttonGenerationColection.Name = "buttonGenerationColection";
+            this.buttonGenerationColection.Size = new System.Drawing.Size(172, 41);
+            this.buttonGenerationColection.TabIndex = 22;
+            this.buttonGenerationColection.Text = "Сгенерировать коллекцию";
+            this.buttonGenerationColection.UseVisualStyleBackColor = true;
+            this.buttonGenerationColection.Click += new System.EventHandler(this.buttonGenerationColection_Click);
+            // 
+            // listView1
+            // 
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(787, 354);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(317, 101);
+            this.listView1.TabIndex = 23;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(787, 332);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(61, 16);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Замеры:";
             // 
             // VetClinic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1689, 665);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.buttonGenerationColection);
             this.Controls.Add(this.dataGridViewAllAnimal);
             this.Controls.Add(this.labelAlarm);
             this.Controls.Add(this.labelWeightLast3Mounth3);
@@ -306,6 +346,7 @@
             this.Controls.Add(this.labelAge);
             this.Controls.Add(this.labelName);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "VetClinic";
             this.Text = "VetClinic";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAllAnimal)).EndInit();
             this.ResumeLayout(false);
@@ -340,6 +381,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn WeightLast3Mounth;
         private System.Windows.Forms.DataGridViewTextBoxColumn Type;
         private System.Windows.Forms.DataGridViewTextBoxColumn NumberPhone;
+        private System.Windows.Forms.Button buttonGenerationColection;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Label label1;
     }
 }
 
