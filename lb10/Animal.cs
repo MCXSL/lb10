@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -128,9 +129,9 @@ namespace lb10
             return arr;
         }
 
-        protected static string GenerationType()
+        private static string GenerationType()
         {
-            string[] moreType = { "кошка", "собака" };
+            string[] moreType = { "кошка", "собака"};
             Random rnd = new Random(Guid.NewGuid().GetHashCode());
             int a = rnd.Next(0, 1);
             return moreType[a];
@@ -223,13 +224,13 @@ namespace lb10
         /// <returns>Строка</returns>
         public static string EnterArr(double[] arr)
         {
-            string str = " ";
+            string str = "";
 
             for (int i = 0; i < arr.Length; i++)
             {
                 str += arr[i].ToString();
                 if (i < arr.Length - 1)
-                str += " | ";
+                str += "; ";
             }
             return str;
         }
@@ -239,10 +240,32 @@ namespace lb10
         /// </summary>
         /// <param name="a">Экземпляр классса</param>
         /// <returns>Строка</returns>
-        public static string FormingString(Animal a)
+        public static string[] FormingString(Animal a)
         {
-            string str = $"{a._Name};             {a._Age};             {EnterArr(a._WeightLast3Mounth)};             {a._Type};             {a._NumberPhone};";
-            return str;
+            string[] strs = { a._Name , a._Age.ToString(), EnterArr(a._WeightLast3Mounth), a._Type, a._NumberPhone };
+            return strs;
+        }
+
+        public static string[] UnformingWeight(string str)
+        {
+            const int numberOfMonths = 3;
+            string[] arr = new string[numberOfMonths];
+            char[] chars = str.ToCharArray();
+            int j = 0;
+            for (int i = 0; i < chars.Length; i++)
+            {
+                if (chars[i] == ' ')
+                {
+                    j++;
+                }
+                else if (chars[i] == ';')
+                {}
+                else
+                {
+                    arr[j] += chars[i];
+                }
+            }
+            return arr;
         }
 
         /// <summary>
