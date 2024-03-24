@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -59,6 +60,10 @@ namespace lb10
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
+
+            row.Cells["Name"].Value = textBoxName.Text;
+
+
             //dataGridViewAllAnimal.Select();
         }
 
@@ -77,18 +82,8 @@ namespace lb10
                 textBoxWeightLast3Mounth1.Text = weightLast3Mounth[0];
                 textBoxWeightLast3Mounth2.Text = weightLast3Mounth[1];
                 textBoxWeightLast3Mounth3.Text = weightLast3Mounth[2];
+                comboBoxType.Text = row.Cells["Type"].Value.ToString();
                 textBoxNumberPhone.Text = row.Cells["NumberPhone"].Value.ToString();
-                //if (string.IsNullOrEmpty(row.ToString()) == true)
-                //{
-                //    string[] weightLast3Mounth = Animal.UnformingWeight(row.Cells["WeightLast3Mounth"].Value.ToString());
-
-                //    textBoxName.Text = row.Cells["Name"].Value.ToString();
-                //    textBoxAge.Text = row.Cells["Age"].Value.ToString();
-                //    textBoxWeightLast3Mounth1.Text = weightLast3Mounth[0];
-                //    textBoxWeightLast3Mounth2.Text = weightLast3Mounth[1];
-                //    textBoxWeightLast3Mounth3.Text = weightLast3Mounth[2];
-                //    textBoxNumberPhone.Text = row.Cells["NumberPhone"].Value.ToString();
-                //}
             }
         }
 
