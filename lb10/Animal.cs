@@ -131,9 +131,9 @@ namespace lb10
 
         private static string GenerationType()
         {
-            string[] moreType = { "кошка", "собака"};
+            string[] moreType = { "Кошка", "Собака"};
             Random rnd = new Random(Guid.NewGuid().GetHashCode());
-            int a = rnd.Next(0, 1);
+            int a = rnd.Next() % 2;
             return moreType[a];
         }
 

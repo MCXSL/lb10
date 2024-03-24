@@ -62,11 +62,14 @@ namespace lb10
             //dataGridViewAllAnimal.Select();
         }
 
-        private void dataGridViewAllAnimal_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
+
+
+        private void dataGridViewAllAnimal_CellClick(object sender, DataGridViewCellEventArgs e)
+        { 
+            if (e.RowIndex >= 0 && dataGridViewAllAnimal.Rows.Count - 1 >  e.RowIndex)
             {
                 DataGridViewRow row = this.dataGridViewAllAnimal.Rows[e.RowIndex];
+
                 string[] weightLast3Mounth = Animal.UnformingWeight(row.Cells["WeightLast3Mounth"].Value.ToString());
 
                 textBoxName.Text = row.Cells["Name"].Value.ToString();
@@ -75,6 +78,17 @@ namespace lb10
                 textBoxWeightLast3Mounth2.Text = weightLast3Mounth[1];
                 textBoxWeightLast3Mounth3.Text = weightLast3Mounth[2];
                 textBoxNumberPhone.Text = row.Cells["NumberPhone"].Value.ToString();
+                //if (string.IsNullOrEmpty(row.ToString()) == true)
+                //{
+                //    string[] weightLast3Mounth = Animal.UnformingWeight(row.Cells["WeightLast3Mounth"].Value.ToString());
+
+                //    textBoxName.Text = row.Cells["Name"].Value.ToString();
+                //    textBoxAge.Text = row.Cells["Age"].Value.ToString();
+                //    textBoxWeightLast3Mounth1.Text = weightLast3Mounth[0];
+                //    textBoxWeightLast3Mounth2.Text = weightLast3Mounth[1];
+                //    textBoxWeightLast3Mounth3.Text = weightLast3Mounth[2];
+                //    textBoxNumberPhone.Text = row.Cells["NumberPhone"].Value.ToString();
+                //}
             }
         }
 
